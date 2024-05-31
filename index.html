@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Chat Application</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="../js/client.js"></script>
+    <style>
+        body {
+            background: linear-gradient(green, rgb(125, 226, 82));
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:100vh;
+        }
+        .container {
+            max-width: 955px;
+            border: 2px solid black;
+            margin:auto;
+            height: 60vh;
+            padding: 33px;
+            overflow-y:auto;
+            margin-bottom: 23px; 
+
+        }
+        .message {
+            background-color: burlywood;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 10px;
+            clear: both;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .send-container{
+            margin:auto;
+            display:block;
+
+
+        }
+        form {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            padding: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        button {
+            width: 15%;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: burlywood;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="Whatsapp-Logo-Png-Transparent-Background.png" width="100px" height="100px" alt="WhatsApp Logo">
+    <div class="container" id="message-container">
+        
+    </div>
+    <form action="" id="send-container">
+        <input type="text" id="messageInp" placeholder="Type your message here..." >
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
